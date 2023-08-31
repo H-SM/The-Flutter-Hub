@@ -7,7 +7,7 @@ Welcome to **The Flutter Hub** repository! This repository is dedicated to track
 
 ## About the Course
 
-[FreeCodeCamp's Learn Flutter Full Course](https://www.freecodecamp.org/news/learn-flutter-full-course/) is a comprehensive course covering various aspects of Flutter development. From building user interfaces to integrating APIs, this course provides a solid foundation for becoming proficient in Flutter.
+[FreeCodeCamp's Learn Flutter Full Course](https://www.youtube.com/watch?v=VPvVD8t02U8) is a comprehensive course covering various aspects of Flutter development. From building user interfaces to integrating APIs, this course provides a solid foundation for becoming proficient in Flutter.
 
 ## Chapters and Aspects
 
