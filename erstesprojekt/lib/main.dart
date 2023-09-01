@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-String nameAdder(String n1, String n2) {
-  return '$n1 $n2';
-}
-
-String nameAdder2(String n1, String n2) =>
-  '$n1 $n2';
-
-
 void main() {
   runApp(const MyApp());
+}
+
+void test () {
+  var mp = {'name' : 'HSM','Abbri':'IS','context':'GR8'};
+  mp['name']= 'HSSSM';
+  print(mp.length);
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print(nameAdder2("HSM", "ahhh"));
+    test();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
