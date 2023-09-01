@@ -2,7 +2,7 @@
 
 we will create our flutter sample project where we can test our dart code. we will make and build our projects here (we can even use up our dartpad to further test out code)... but that's a online service and will be difficult to manage the entire application code
 
-refer the the learning project folder for further knowledge 
+refer the the `ertesprojekt project` folder for further knowledge 
 
 
 ### making a new Flutter Project
