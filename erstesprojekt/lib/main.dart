@@ -5,9 +5,14 @@ void main() {
 }
 
 void test () {
-  var mp = {'name' : 'HSM','Abbri':'IS','context':'GR8'};
-  mp['name']= 'HSSSM';
-  print(mp.length);
+  List <String>? names = null;
+  // final numberOfNames =  names?.length ?? 0;
+  // print(numberOfNames);
+  names?.add("hsm");
+  // final numberOfName =  names?.length ?? 0;
+  print(names);
+
+
 }
 
 class MyApp extends StatelessWidget {
