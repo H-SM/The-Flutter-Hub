@@ -4,15 +4,29 @@ void main() {
   runApp(const MyApp());
 }
 
+class Person {
+
+  final String name;
+  
+  Person(this.name);
+  //pass the argument to it ( constructor )
+
+  void run () {
+    print("running...");
+  }
+
+  void breathe () {
+    print("breathing");
+  }
+  void printName() {
+    print(name);
+  }
+}
+
 void test () {
-  List <String>? names = null;
-  // final numberOfNames =  names?.length ?? 0;
-  // print(numberOfNames);
-  names?.add("hsm");
-  // final numberOfName =  names?.length ?? 0;
-  print(names);
-
-
+  //instance of the class (object)
+  final person = Person("hsm");
+  person.printName();
 }
 
 class MyApp extends StatelessWidget {
