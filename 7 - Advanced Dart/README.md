@@ -130,7 +130,7 @@ print(getNumb());
 
 ## Generics 
 - to avoid writing same code again and again 
-- like defining a piece of code in cpp 
+- looking over the generics of the code and repectively streamlining it further over it
 
 Imagine this senerio -> 
 ```dart
