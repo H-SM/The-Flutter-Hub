@@ -5,28 +5,67 @@ void main() {
 }
 
 class Person {
+  final String firstName;
+  final String lastName;
 
-  final String name;
-  
-  Person(this.name);
-  //pass the argument to it ( constructor )
+  Person(this.firstName, this.lastName); 
+}
 
-  void run () {
-    print("running...");
-  }
+extension Fullname on Person {
+  String get fullName => '$firstName $lastName';
+}
 
-  void breathe () {
-    print("breathing");
-  }
-  void printName() {
-    print(name);
+extension Run on Person {
+  void run(){
+    print('$firstName is running...');
   }
 }
 
+Future<int> heavyFutureMultiplication (int a) {
+  return Future.delayed(const Duration(seconds: 3), () => a);
+  //delayed returned by 3 sec
+} 
+
+Stream<String> getName() {
+  return Stream.periodic(const Duration(seconds: 1), (value) => 'HSM');
+}
+
+Stream<Iterable<int>> getNumbers() async* {
+  yield [1];
+  yield [2];
+  yield [3];
+  yield [69];
+}
+
+Iterable<int> getNumb() sync* {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+class PairInt {
+  final int val1;
+  final int val2;
+
+  PairInt(this.val1, this.val2);
+
+}
+class PairString {
+  final String val1;
+  final String val2;
+
+  PairString(this.val1, this.val2);
+}
+
+class Pair <A, B>{ // this is a generic (to look over what kind of input we have here)
+  final A val1;
+  final B val2;
+
+  Pair(this.val1, this.val2);
+}
 void test () {
-  //instance of the class (object)
-  final person = Person("hsm");
-  person.printName();
+  final names = Pair("HSM", "GR8");
+  print(names);
 }
 
 class MyApp extends StatelessWidget {
