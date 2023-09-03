@@ -54,7 +54,7 @@ Feel free to update this README as you progress through the course. You can add 
 To get started, make sure you have Flutter and Dart installed on your system. You can follow the installation guide provided in the [Flutter documentation](https://flutter.dev/docs/get-started/install). Once you're set up, clone this repository:
 
 ```bash
-git clone https://github.com/your-username/the-flutter-hub.git
+git clone https://github.com/H-SM/the-flutter-hub.git
 ```
 
 ## Contribution
