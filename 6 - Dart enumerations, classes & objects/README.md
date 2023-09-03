@@ -158,3 +158,20 @@ void test() {
 ```
 TODO: look over it further 
 
+## Custom Operator 
+
+- override the existing operator 
+- define a custom operator on the class 
+
+```dart
+class Cat extend Object{
+  final String name;
+  Cat(this.name);
+
+  @override 
+  bool operator ==(covariant Cat other) => other.name == name;
+
+  @override 
+  int get hashCode => name.hashCode;
+}
+```
