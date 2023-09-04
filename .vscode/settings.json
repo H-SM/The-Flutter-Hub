@@ -1,4 +1,4 @@
 {
-    "cmake.configureOnOpen": true,
-    "cmake.sourceDirectory": "E:/Project/The-Flutter-Hub/erstesprojekt/linux"
+    "cmake.configureOnOpen": false
+    // "cmake.configureOnOpen": true
 }
