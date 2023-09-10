@@ -1,28 +1,18 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:inotes/views/login_view.dart';
-import 'firebase_options.dart';
+import 'package:inotes/firebase_options.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(MaterialApp(
-    title: 'Flutter Demo',
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-    ),
-    home: const LoginView(),
-  ));
-}
-
-class RegisterView extends StatefulWidget {
-  const RegisterView({super.key});
+class LoginView extends StatefulWidget {
+  const LoginView({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  State<RegisterView> createState() => _RegisterViewState();
+  State<LoginView> createState() => _LoginViewState();
 }
 
-class _RegisterViewState extends State<RegisterView> {
+class _LoginViewState extends State<LoginView> {
   late final TextEditingController _email;
   late final TextEditingController _password;
 
@@ -44,7 +34,7 @@ class _RegisterViewState extends State<RegisterView> {
   Widget build(BuildContext context) {
     // return Container(color: Colors.orange.shade300);
     return Scaffold(
-      appBar: AppBar(title: const Text('Register')),
+      appBar: AppBar(title: const Text('Login')),
       body: FutureBuilder(
           future: Firebase.initializeApp(
             options: DefaultFirebaseOptions.currentPlatform,
@@ -77,26 +67,24 @@ class _RegisterViewState extends State<RegisterView> {
                         final password = _password.text;
                         try {
                           final userCredential = await FirebaseAuth.instance
-                              .createUserWithEmailAndPassword(
+                              .signInWithEmailAndPassword(
                                   email: email,
                                   password:
                                       password); // this returns UserCredentials
-
                           print(userCredential);
                         } on FirebaseAuthException catch (e) {
-                          //handle weak password
-                          if (e.code == 'weak-password') {
-                            print("weak password");
-                          } else if (e.code == 'email-already-in-use') {
-                            print("Email already in use");
-                          } else if (e.code == 'invalid-email') {
-                            print("Invalid email");
+                          print("Exception occuried");
+                          if (e.code == 'user-not-found') {
+                            print("User not found");
+                          } else if (e.code == 'wrong-password') {
+                            print("Wrong Password Entered");
                           } else {
-                            print(e);
+                            print("Something else happened");
+                            print(e.code);
                           }
                         }
                       },
-                      child: const Text("Register NOW!"),
+                      child: const Text("Login"),
                     ),
                   ],
                 );
