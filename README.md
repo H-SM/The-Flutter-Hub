@@ -1,6 +1,6 @@
 # The Flutter Hub
+<p align="center" ><i><del>DISCONNECTED LEARNING FLUTTER FRAMEWORK TILL 1ST DEC 2023</u></i></p>
 <p align="center" >
-  <p>DISCONNECTED LEARNING FLUTTER FRAMEWORK TILL 1ST DEC 2023</p>
   <img src="https://storage.googleapis.com/cms-storage-bucket/ec64036b4eacc9f3fd73.svg" alt="h-sm" height="70" />
 </p>
 
